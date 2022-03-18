@@ -1,7 +1,7 @@
 ---
 
 title: spring security (2)
-categories: [Spring, 인증/인가]
+categories: [Spring]
 tags: [인증/인가, Spring Security]     # TAG names should always be lowercase
 author:
 name: Choi Jin Kyu
