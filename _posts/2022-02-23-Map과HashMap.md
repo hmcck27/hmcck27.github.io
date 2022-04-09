@@ -29,6 +29,8 @@ HashMap은 HashTable을 통해서 key-value를 유지하고, Map은 Red-Black tr
 물론 구현체는 더 다양하다.  
 실무에서 static으로 사용할거면 concurrent hashmap을 사용해야 한다. 동시성 이슈가 있을 수 있으니까...
 
+---
+
 ## Map
 Map은 key-value를 가진 집합이며, 중복을 허용하지 않는다.  
 즉 한개의 key에 한개의 value가 매핑된다.  
