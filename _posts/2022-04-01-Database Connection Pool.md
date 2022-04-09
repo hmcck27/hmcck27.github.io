@@ -24,8 +24,6 @@ jdbc는 interface이기 때문에 실제 어떠한 데이터 베이스를 사용
 음 만약에 이런 jdbc api가 없었더라면 = interface가 없다면,  
 우리는 사용하는 database 종류에 맞춘 sql문을 각각 작성해야 했을것이다.  
 
-![jdbc](./img/jdbc.jpeg)
-
 jdbc의 역할은 다음과 같다.  
 1. java application 에서 DB서버에 접속
 2. sql을 수행하고 그 결과를 resultSet에 받아온다.
@@ -44,7 +42,9 @@ jdbc interface는 다음과 같다.
 3. JDBC Driver
 4. DBMS
 
-# Database Connection 
+---
+
+## Database Connection 
 
 어플리케이션과 Database어플리케이션 간의 통신을 위한 객체이다.  
 
@@ -94,7 +94,7 @@ public class DatabaseConn {
 }
 ```
 
-# Database Connection Pool
+## Database Connection Pool
 
 Database Connection Pool이란, 말 그대로  
 database와의 connection을 담고 있는 pool이다.   
@@ -136,6 +136,8 @@ DBCP의 경우 다음과 같은 특징을 가진다.
 
 즉 connection pool의 크기를 조절해서 성능을 증가시키는것은 어쨋든 한계가 있다.  
 결국에 thread의 수보다 크면 그 이상 증가해도 의미가 없다.  
+
+---
 
 ## Hikari CP
 

@@ -25,6 +25,8 @@ lombok을 사용하면 @Getter, @Setter등을 사용하게 된다.
 하지만 난 단순히 code에 annotation을 작성했을 뿐인데,  
 어떻게 실제 코드가 변화할 수 있는건지 의문이 있었다.  
 
+---
+
 ## Annotation이 뭘까 ?  
 1. Annotation은 metadata이다. 즉 data에 대한 data이다.  
 예를 들어서 다음 코드를 보자.  
@@ -52,6 +54,8 @@ Lombok의 @Getter같은 경우는 개발자가 직접 getter를 구현하지 않
 
 3. run time시 특정 기능을 실행하도록 정보를 제공한다. spring 같은 framework에서는 DI를 위한 annotation을 다는 경우가 많다. 이런 annotation은 run time에서 annotation이 적용된 element의 역할을 정의하게 된다.
 
+---
+
 ## 왜 Annotation이 필요할까 ?
 annotation이전에는 xml을 사용했다.  
 하지만 xml은 유지보수가 쉽지 않았다.  
@@ -63,6 +67,8 @@ xml은 코드 자체에서 loosely coupled 즉 의도적으로 느슨한 결합�
 
 만약에 application 전역에서 적용되는 상수, 파라미터를 설정하고 싶은 경우 code에 묶여있지 않은 xml를 사용하는것이 더 좋은 선택일 수 있다.  
 하지만 code의 일부분에만 적용되도록 하고 싶다면 그런 경우에는 xml보다는 annotation을 사용하게 나을 것이다.  
+
+---
 
 ## Custom Annotation을 만드는 방법
 일단은 @Override 어노테이션을 확인해보자.  
@@ -158,7 +164,7 @@ public enum RetentionPolicy {
 ```
 
 예시로 몇개의 annotation을 살펴보자.
-1. @Override
+1. @Override  
 ```java
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.SOURCE)
@@ -169,7 +175,7 @@ public @interface Override {
 target은 method이다.  
 retention은 source이다. -> compile되고 이후에는 버려진다.
 
-2. @Getter
+2. @Getter  
 ```java
 @Target({ElementType.FIELD, ElementType.TYPE})
 @Retention(RetentionPolicy.SOURCE)
@@ -293,6 +299,8 @@ ns         %     Task name
 ```
 
 끝 !
+
+---
 
 ## Annotaion processor
 
