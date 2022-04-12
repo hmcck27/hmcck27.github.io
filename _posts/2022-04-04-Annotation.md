@@ -173,7 +173,8 @@ public @interface Override {
 ```
 
 target은 method이다.  
-retention은 source이다. -> compile되고 이후에는 버려진다.
+retention은 source이다. -> compile되고 이후에는 버려진다.   
+
 
 2. @Getter  
 ```java
@@ -214,7 +215,7 @@ public @interface Getter {
 Target은 FIELD, TYPE으로 field과 class, enum, interface에 선언가능하다.   
 Retention은 source이다.  
 
-3. @SpringBootApplication
+3. @SpringBootApplication   
 
 ```java
 @Target(ElementType.TYPE)
@@ -228,7 +229,7 @@ public @interface SpringBootApplication {
 target은 class이고 retention은 runtime이다.  
 spring이 작동되고 있는 runtime에도 해당 annotation은 유지된다.  
 
-4. javax의 @NotNull
+4. javax의 @NotNull   
 
 ```java
 @Target({ METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER, TYPE_USE })
@@ -253,8 +254,8 @@ public @interface LogExecutionTime {
 ```
 일단 annotation을 만들어주자.  
 1. method가 target이니까 method로 설정해준다.
-2. 로그를 남기려면 runtime으로 설정해야 한다.
-
+2. 로그를 남기려면 runtime으로 설정해야 한다.   
+   
 ```java
 @Component
 @Aspect
@@ -276,8 +277,8 @@ public class LogAspect {
 
 1. LogAspect에서는 logger를 선언한다.
 2. stopwatch 객체를 활용해서 시간을 측정하고, start()의 taskname으로 joinPoint의 signature로 설정한다.
-3. proceed가 끝나면 logger.info로 log를 출력한다.
-
+3. proceed가 끝나면 logger.info로 log를 출력한다.  
+  
 ```java
 @Controller
 public class TestController {
