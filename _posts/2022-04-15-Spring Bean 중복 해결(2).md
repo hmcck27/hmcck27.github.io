@@ -1,3 +1,18 @@
+---
+
+title: Spring bean 중복 해결(2)
+categories: [Spring]
+tags: [Spring, Bean]     # TAG names should always be lowercase
+author:
+name: Choi Jin Kyu
+link: https://github.com/hmcck27
+toc: true
+# date: 2022-02-05
+
+img_path: /assets/img/mdImage/
+
+---
+
 # Spring Bean 중복 해결 (2)
 
 앞서서 spring bean이 중복되는 상황 해결을 위한 여러가지 방법에 대해서 알아보았다.  
