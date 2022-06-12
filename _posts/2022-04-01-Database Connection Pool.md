@@ -72,6 +72,5 @@ try {
 5. 이용자 수에 따라서 connection의 수를 직접 조절할 수 있다.
 6. 많이 설정하면 메모리 소모가 많은대신 대기시간이 줄어든다.
 
-## HikariCP
+실제로 tomcat에서 pool에서 관리할 유휴 connection 수를 설정할 수 있다.  
 
-Database Connection Pool을 관리한다.  
